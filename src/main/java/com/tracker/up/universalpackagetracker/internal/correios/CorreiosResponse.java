@@ -2,24 +2,37 @@ package com.tracker.up.universalpackagetracker.internal.correios;
 
 import java.util.List;
 
-import com.tracker.up.universalpackagetracker.internal.correios.payload.request.Evento;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.tracker.up.universalpackagetracker.internal.correios.payload.request.CorreiosEvents;
 
 public class CorreiosResponse {
 
-  private String codigo;
+  @JsonProperty("codigo")
+  private String code;
+  
   private String host;
-  private List<Evento> eventos;
+  
+  @JsonProperty("eventos")
+  private List<CorreiosEvents> events;
+  
+  @JsonProperty("hora")
   private double time;
-  private int quantidade;
-  private String servico;
-  private String ultimo;
 
-  public String getCodigo() {
-    return codigo;
+  @JsonProperty("quantidade")
+  private int amount;
+  
+  @JsonProperty("servico")
+  private String service;
+
+  @JsonProperty("ultimo")
+  private String latest;
+
+  public String getCode() {
+    return code;
   }
 
-  public void setCodigo(String codigo) {
-    this.codigo = codigo;
+  public void setCode(String code) {
+    this.code = code;
   }
 
   public String getHost() {
@@ -30,12 +43,12 @@ public class CorreiosResponse {
     this.host = host;
   }
 
-  public List<Evento> getEventos() {
-    return eventos;
+  public List<CorreiosEvents> getEvents() {
+    return events;
   }
 
-  public void setEventos(List<Evento> eventos) {
-    this.eventos = eventos;
+  public void setEvents(List<CorreiosEvents> events) {
+    this.events = events;
   }
 
   public double getTime() {
@@ -46,27 +59,27 @@ public class CorreiosResponse {
     this.time = time;
   }
 
-  public int getQuantidade() {
-    return quantidade;
+  public int getAmount() {
+    return amount;
   }
 
-  public void setQuantidade(int quantidade) {
-    this.quantidade = quantidade;
+  public void setAmount(int amount) {
+    this.amount = amount;
   }
 
-  public String getServico() {
-    return servico;
+  public String getService() {
+    return service;
   }
 
-  public void setServico(String servico) {
-    this.servico = servico;
+  public void setService(String service) {
+    this.service = service;
   }
 
-  public String getUltimo() {
-    return ultimo;
+  public String getLatest() {
+    return latest;
   }
 
-  public void setUltimo(String ultimo) {
-    this.ultimo = ultimo;
+  public void setLatest(String latest) {
+    this.latest = latest;
   }
 }

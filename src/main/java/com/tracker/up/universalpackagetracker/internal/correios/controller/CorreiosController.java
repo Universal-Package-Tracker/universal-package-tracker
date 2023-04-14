@@ -14,8 +14,8 @@ public class CorreiosController {
   @Autowired
   CorreiosService correiosService;
 
-  @GetMapping("/correios/{codigo}")
-  public CorreiosResponse consultar(@PathVariable String codigo) {
-    return correiosService.consultar(codigo);
+  @GetMapping("/correios/{code}")
+  public CorreiosResponse consult(@PathVariable String code) {
+    return correiosService.consult(code);
   }
 }

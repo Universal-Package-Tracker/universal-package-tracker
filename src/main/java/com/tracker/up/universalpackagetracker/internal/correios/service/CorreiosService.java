@@ -25,7 +25,7 @@ public class CorreiosService {
   @Value("${correios.api.token}")
   private String apiToken;
 
-  public CorreiosResponse consultar(String codigo) {
+  public CorreiosResponse consult(String codigo) {
     String url = apiUrl + "?user=" + apiUser + "&token=" + apiToken + "&codigo=" + codigo;
 
     ResponseEntity<CorreiosResponse> response = restTemplate.getForEntity(
