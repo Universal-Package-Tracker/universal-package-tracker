@@ -1,4 +1,4 @@
-package com.tracker.up.universalpackagetracker.services.impl;
+package com.tracker.up.universalpackagetracker.domain.tracker.service.impl;
 
 import org.springframework.stereotype.Service;
 
